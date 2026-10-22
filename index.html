@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>اسم تطبيقك ⚠️ — حمّل التطبيق مجاناً (APK)</title>
+<meta name="description" content="⚠️ استبدل هذا الوصف بوصف تطبيقك. حمّل أحدث إصدار من التطبيق بصيغة APK مجاناً ومباشرة.">
+<!-- ============================================================
+     🚨 دليل التعديل السريع — اقرأني قبل النشر
+     1) استبدل كل ظهور لـ "اسم تطبيقك" باسم تطبيقك الحقيقي
+        (استخدم البحث والاستبدال في أي محرر نصوص).
+     2) عدّل رابط زر التحميل:
+           USER    ← اسم مستخدمك على GitHub
+           REPO    ← اسم المستودع
+           APP.apk ← اسم ملف الـ APK الذي سترفعه في الإصدار
+        الصيغة المطلوبة حرفياً:
+        https://github.com/USER/REPO/releases/latest/download/APP.apk
+        نصيحة ذهبية: ثبّت نفس اسم ملف APK في كل الإصدارات المستقبلية،
+        والرابط سيحمّل آخر نسخة تلقائياً دون تعديل الموقع أبداً.
+     3) استبدل كل نص معلَّم بـ ⚠️ بمحتواك الحقيقي.
+     4) خطوات النشر الكاملة موجودة في ملف README.md
+============================================================ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#070b17;--text:#eef1fb;--muted:#9aa6c6;
+  --card:rgba(255,255,255,.045);--border:rgba(255,255,255,.1);
+  --c1:#6d5ef8;--c2:#a855f7;
+  --grad:linear-gradient(135deg,var(--c1),var(--c2));
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Cairo','Segoe UI',Tahoma,sans-serif;background:var(--bg);color:var(--text);
+  line-height:1.9;overflow-x:hidden;
+  background-image:
+    radial-gradient(900px 500px at 85% -10%,rgba(109,94,248,.22),transparent 60%),
+    radial-gradient(700px 400px at 0% 0%,rgba(168,85,247,.14),transparent 55%),
+    radial-gradient(800px 500px at 50% 110%,rgba(34,211,238,.07),transparent 60%);
+  background-attachment:fixed;
+}
+.container{max-width:1080px;margin:0 auto;padding:0 22px}
+.hidden{display:none!important}
+img{max-width:100%}
+
+/* ===== الشريط العلوي ===== */
+nav{position:sticky;top:0;z-index:50;background:rgba(7,11,23,.78);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:1.1rem}
+.logo{width:36px;height:36px;border-radius:10px;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:1.15rem}
+
+/* ===== الأزرار ===== */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 32px;border-radius:14px;font-weight:800;font-size:1.05rem;text-decoration:none;transition:.25s;border:none;cursor:pointer}
+.btn-primary{background:var(--grad);color:#fff;box-shadow:0 10px 34px rgba(109,94,248,.45)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 16px 44px rgba(109,94,248,.6)}
+.btn-ghost{border:1px solid var(--border);color:var(--text);background:rgba(255,255,255,.03)}
+.btn-ghost:hover{border-color:var(--c2)}
+.btn-sm{padding:9px 22px;font-size:.95rem;border-radius:11px}
+
+/* ===== الهيرو ===== */
+.hero{padding:96px 0 80px;text-align:center}
+.badge{display:inline-block;border:1px solid rgba(109,94,248,.5);background:rgba(109,94,248,.12);color:#c9c4ff;padding:7px 18px;border-radius:999px;font-size:.9rem;font-weight:700;margin-bottom:22px}
+h1{font-size:clamp(2.1rem,5.5vw,3.4rem);font-weight:900;line-height:1.55}
+.grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--muted);max-width:640px;margin:16px auto 0;font-size:1.08rem}
+.cta-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:34px}
+.trust{margin-top:16px;color:var(--muted);font-size:.92rem}
+.note{max-width:660px;margin:18px auto 0;background:rgba(250,204,21,.1);border:1px solid rgba(250,204,21,.35);color:#fde68a;padding:10px 18px;border-radius:12px;font-size:.95rem}
+.pills{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:26px}
+.pill{border:1px solid var(--border);background:var(--card);padding:7px 16px;border-radius:999px;font-size:.9rem;color:var(--muted)}
+
+/* ===== الأقسام ===== */
+.section{padding:84px 0}
+.alt{background:rgba(255,255,255,.022);border-block:1px solid var(--border)}
+.section h2{font-size:clamp(1.6rem,3.5vw,2.3rem);font-weight:900;text-align:center}
+.section-sub{text-align:center;color:var(--muted);max-width:660px;margin:10px auto 46px}
+
+/* ===== المميزات ===== */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:28px 24px;transition:.25s}
+.card:hover{transform:translateY(-4px);border-color:rgba(109,94,248,.5);background:rgba(109,94,248,.07)}
+.ico{font-size:1.7rem;width:58px;height:58px;display:flex;align-items:center;justify-content:center;background:var(--grad);border-radius:16px;margin-bottom:18px}
+.card h3{font-size:1.12rem;margin-bottom:8px}
+.card p{color:var(--muted);font-size:.97rem}
+
+/* ===== لقطات الشاشة ===== */
+.phones{display:flex;gap:26px;justify-content:center;flex-wrap:wrap}
+.phone{width:215px;aspect-ratio:9/19;border:2px dashed rgba(255,255,255,.28);border-radius:28px;background:rgba(255,255,255,.03);display:flex;flex-direction:column;gap:8px;align-items:center;justify-content:center;color:var(--muted);text-align:center;padding:16px;font-size:.95rem}
+.phone .big{font-size:2.2rem}
+.phone img{width:100%;height:100%;object-fit:cover;border-radius:24px}
+
+/* ===== خطوات التثبيت ===== */
+.steps{max-width:780px;margin:0 auto;display:grid;gap:18px}
+.step{display:flex;gap:18px;background:var(--card);border:1px solid var(--border);border-radius:18px;padding:22px;align-items:flex-start}
+.num{flex:none;width:46px;height:46px;border-radius:14px;background:var(--grad);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1.2rem;color:#fff}
+.step h3{font-size:1.08rem;margin-bottom:6px}
+.step p{color:var(--muted);font-size:.97rem}
+.step code{background:rgba(255,255,255,.09);padding:2px 9px;border-radius:8px;font-size:.9em;white-space:nowrap}
+
+/* ===== الأسئلة الشائعة ===== */
+.faq{max-width:780px;margin:0 auto;display:grid;gap:14px}
+details{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px 22px}
+summary{font-weight:800;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.5rem;color:var(--c2);font-weight:900}
+details[open] summary::after{content:"–"}
+details p{color:var(--muted);margin-top:10px}
+
+/* ===== التذييل ===== */
+footer{border-top:1px solid var(--border);padding:40px 0 48px;text-align:center;color:var(--muted);font-size:.95rem}
+footer .links{display:flex;gap:24px;justify-content:center;margin:16px 0;flex-wrap:wrap}
+footer a{color:var(--text);text-decoration:none}
+footer a:hover{color:var(--c2)}
+
+@media(max-width:640px){
+  .hero{padding:70px 0 60px}
+  .section{padding:64px 0}
+  .step{flex-direction:column;gap:12px}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== الشريط العلوي ===== -->
+<nav>
+  <div class="container nav-inner">
+    <div class="brand"><span class="logo">📱</span><span>اسم تطبيقك ⚠️</span></div>
+    <a class="btn btn-primary btn-sm" href="#download">تحميل الآن</a>
+  </div>
+</nav>
+
+<!-- ===== القسم الرئيسي ===== -->
+<header class="hero" id="top">
+  <div class="container">
+    <span class="badge">🚀 الإصدار الأحدث متاح الآن</span>
+    <h1>حمّل <span class="grad">اسم تطبيقك ⚠️</span><br>وابدأ الاستخدام في دقيقة</h1>
+    <p class="lead">⚠️ ضع هنا وصفاً من سطرين يشرح فكرة تطبيقك وأهم ما يقدمه — هذا أول نص يقرأه الزائر، اجعله قوياً ومختصراً.</p>
+    <div id="platform-note" class="note hidden">⚠️ يبدو أنك تتصفح من جهاز غير أندرويد — ملف التحميل الحالي مخصص لأجهزة Android فقط.</div>
+    <div class="cta-row">
+      <a id="download" class="btn btn-primary" href="https://github.com/USER/REPO/releases/latest/download/APP.apk">⬇️ تحميل التطبيق (APK)</a>
+      <a class="btn btn-ghost" href="#install">طريقة التثبيت</a>
+    </div>
+    <p class="trust">🔒 التنزيل مباشرة من GitHub — مجاني، بدون إعلانات، وبدون تسجيل</p>
+    <div class="pills">
+      <span class="pill">الإصدار: ⚠️ 1.0.0</span>
+      <span class="pill">الحجم: ⚠️ ~XX ميجابايت</span>
+      <span class="pill">آخر تحديث: ⚠️ أكتوبر 2026</span>
+      <span class="pill">متطلب: Android 8.0+ ⚠️</span>
+    </div>
+  </div>
+</header>
+
+<!-- ===== المميزات ===== -->
+<section class="section" id="features">
+  <div class="container">
+    <h2>مميزات التطبيق</h2>
+    <p class="section-sub">⚠️ استبدل هذه البطاقات الست بمميزات تطبيقك الحقيقية — مميزة قصيرة وعملية أفضل من طويلة.</p>
+    <div class="grid">
+      <div class="card"><div class="ico">⚡</div><h3>⚠️ عنوان الميزة الأولى</h3><p>⚠️ اكتب هنا وصفاً من سطرين يشرح هذه الميزة وفائدتها للمستخدم.</p></div>
+      <div class="card"><div class="ico">🎨</div><h3>⚠️ عنوان الميزة الثانية</h3><p>⚠️ اكتب هنا وصفاً من سطرين يشرح هذه الميزة وفائدتها للمستخدم.</p></div>
+      <div class="card"><div class="ico">🔒</div><h3>⚠️ عنوان الميزة الثالثة</h3><p>⚠️ اكتب هنا وصفاً من سطرين يشرح هذه الميزة وفائدتها للمستخدم.</p></div>
+      <div class="card"><div class="ico">📊</div><h3>⚠️ عنوان الميزة الرابعة</h3><p>⚠️ اكتب هنا وصفاً من سطرين يشرح هذه الميزة وفائدتها للمستخدم.</p></div>
+      <div class="card"><div class="ico">🌙</div><h3>⚠️ عنوان الميزة الخامسة</h3><p>⚠️ اكتب هنا وصفاً من سطرين يشرح هذه الميزة وفائدتها للمستخدم.</p></div>
+      <div class="card"><div class="ico">🆓</div><h3>⚠️ عنوان الميزة السادسة</h3><p>⚠️ اكتب هنا وصفاً من سطرين يشرح هذه الميزة وفائدتها للمستخدم.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== لقطات الشاشة ===== -->
+<section class="section alt" id="screenshots">
+  <div class="container">
+    <h2>لقطات من التطبيق</h2>
+    <p class="section-sub">⚠️ استبدل كل مربع من هذه المربعات بلقطة شاشة حقيقية من تطبيقك (انسخ وسم الصورة الموجود في التعليق داخل كل مربع).</p>
+    <div class="phones">
+      <div class="phone"><span class="big">🖼️</span>⚠️ لقطة الشاشة الأولى<!-- استبدل هذا المربع كاملاً بـ: <div class="phone"><img src="screen1.png" alt="لقطة شاشة 1"></div> --></div>
+      <div class="phone"><span class="big">🖼️</span>⚠️ لقطة الشاشة الثانية<!-- استبدل هذا المربع كاملاً بـ: <div class="phone"><img src="screen2.png" alt="لقطة شاشة 2"></div> --></div>
+      <div class="phone"><span class="big">🖼️</span>⚠️ لقطة الشاشة الثالثة<!-- استبدل هذا المربع كاملاً بـ: <div class="phone"><img src="screen3.png" alt="لقطة شاشة 3"></div> --></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== طريقة التثبيت ===== -->
+<section class="section" id="install">
+  <div class="container">
+    <h2>طريقة التثبيت على أندرويد</h2>
+    <p class="section-sub">التطبيق يُنزَّل بصيغة APK من خارج متجر Google Play، لذلك سيريك أندرويد تحذيرات أمان طبيعية — هذه الخطوات الثلاث تحلّها ببساطة:</p>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><div><h3>اضغط زر التحميل</h3><p>إذا ظهرت رسالة <code>«قد يكون هذا الملف ضاراً»</code> من المتصفح اضغط <code>«التنزيل على أي حال»</code> — هذا تحذير عام يظهر لأي ملف APK من خارج المتجر حتى لو كان الموقع موثوقاً تماماً.</p></div></div>
+      <div class="step"><div class="num">2</div><div><h3>افتح الملف واسمح بالتثبيت</h3><p>عند فتح الملف لأول مرة سيطلب أندرويد السماح بخيار <code>«تثبيت تطبيقات غير معروفة»</code> للمتصفح أو مدير الملفات — وافق مرة واحدة فقط.</p></div></div>
+      <div class="step"><div class="num">3</div><div><h3>أكمل فحص الحماية</h3><p>إذا ظهر فحص <code>Play Protect</code> اضغط <code>«التثبيت على أي حال»</code>، ثم افتح التطبيق واستمتع. ✅</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== الأسئلة الشائعة ===== -->
+<section class="section alt" id="faq">
+  <div class="container">
+    <h2>الأسئلة الشائعة</h2>
+    <p class="section-sub">⚠️ عدّل الأجوبة بما يناسب سياسة تطبيقك.</p>
+    <div class="faq">
+      <details><summary>هل التطبيق مجاني؟</summary><p>⚠️ اكتب هنا جوابك — مثال: نعم، التطبيق مجاني بالكامل بلا اشتراكات أو إعلانات.</p></details>
+      <details><summary>هل ملف APK آمن؟</summary><p>⚠️ اكتب هنا جوابك — مثال: نعم، الملف يُستضاف على GitHub ويُنزَّل من رابط رسمي واحد لا يتغير، ولا توزع نسخاً من مصادر أخرى.</p></details>
+      <details><summary>كيف أُحدّث التطبيق لإصدار أحدث؟</summary><p>حمّل النسخة الأحدث من نفس هذه الصفحة وثبّتها فوق النسخة الحالية مباشرة — سيتم التحديث دون فقدان بياناتك. زر التحميل هنا يعطيك دائماً آخر إصدار تلقائياً.</p></details>
+      <details><summary>هل يعمل التطبيق بدون إنترنت؟</summary><p>⚠️ اكتب هنا جوابك حسب طبيعة تطبيقك.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== التذييل ===== -->
+<footer>
+  <div class="container">
+    <div class="brand" style="justify-content:center"><span class="logo">📱</span><span>اسم تطبيقك ⚠️</span></div>
+    <div class="links">
+      <a href="#">⚠️ سياسة الخصوصية</a>
+      <a href="mailto:you@example.com">⚠️ تواصل معنا</a>
+      <a href="https://github.com/USER/REPO">المستودع على GitHub</a>
+    </div>
+    <p>© <span id="year"></span> اسم تطبيقك ⚠️ — جميع الحقوق محفوظة</p>
+    <p style="margin-top:6px;opacity:.7">مُستضاف مجاناً على GitHub Pages</p>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+if(!/Android/i.test(navigator.userAgent)){
+  var n = document.getElementById('platform-note');
+  if(n) n.classList.remove('hidden');
+}
+</script>
+</body>
+</html>
