@@ -3,22 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> shadow_vault ⚠️ — حمّل التطبيق مجاناً (APK)</title>
-<meta name="description" content="⚠️ استبدل هذا الوصف بوصف تطبيقك. حمّل أحدث إصدار من التطبيق بصيغة APK مجاناً ومباشرة.">
+<title>Shadow Vault — حمّل التطبيق (APK) | فلترة المكالمات والرسائل وحماية خصوصيتك</title>
+<meta name="description" content="حمّل أحدث إصدار من Shadow Vault v0.7.2 بصيغة APK: فلترة المكالمات والرسائل غير المرغوبة، تنظيف السجل، وحماية كاملة للخصوصية — يعمل محلياً على أندرويد 7 فما فوق.">
 <!-- ============================================================
-     🚨 دليل التعديل السريع — اقرأني قبل النشر
-     1) استبدل كل ظهور لـ "اسم تطبيقك" باسم تطبيقك الحقيقي
-        (استخدم البحث والاستبدال في أي محرر نصوص).
-     2) عدّل رابط زر التحميل:
-           USER    ← اسم مستخدمك على GitHub
-           REPO    ← اسم المستودع
-           APP.apk ← اسم ملف الـ APK الذي سترفعه في الإصدار
-        الصيغة المطلوبة حرفياً:
-        https://github.com/USER/REPO/releases/latest/download/APP.apk
-        نصيحة ذهبية: ثبّت نفس اسم ملف APK في كل الإصدارات المستقبلية،
-        والرابط سيحمّل آخر نسخة تلقائياً دون تعديل الموقع أبداً.
-     3) استبدل كل نص معلَّم بـ ⚠️ بمحتواك الحقيقي.
-     4) خطوات النشر الكاملة موجودة في ملف README.md
+     ✅ نسخة الإطلاق الرسمية — Shadow Vault v0.7.2
+     آخر خطوة متبقية عليك: التأكد من رابط زر التحميل ↓
+     ابحث عن github.com/ainz-00/...  في الأسفل وعدّل اسم المستودع
+     واسم ملف الـ APK ليطابق مستودع الإصدارات الحقيقي لديك.
+     الصيغة: https://github.com/USER/REPO/releases/latest/download/FILE.apk
 ============================================================ -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,19 +18,19 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --bg:#070b17;--text:#eef1fb;--muted:#9aa6c6;
-  --card:rgba(255,255,255,.045);--border:rgba(255,255,255,.1);
-  --c1:#6d5ef8;--c2:#a855f7;
-  --grad:linear-gradient(135deg,var(--c1),var(--c2));
+  --bg:#0a0f16;--text:#eef4f8;--muted:#8fa3b3;
+  --card:rgba(255,255,255,.045);--border:rgba(255,255,255,.09);
+  --g1:#10b981;--g2:#22d3ee;
+  --grad:linear-gradient(135deg,var(--g1),var(--g2));
 }
 html{scroll-behavior:smooth}
 body{
   font-family:'Cairo','Segoe UI',Tahoma,sans-serif;background:var(--bg);color:var(--text);
   line-height:1.9;overflow-x:hidden;
   background-image:
-    radial-gradient(900px 500px at 85% -10%,rgba(109,94,248,.22),transparent 60%),
-    radial-gradient(700px 400px at 0% 0%,rgba(168,85,247,.14),transparent 55%),
-    radial-gradient(800px 500px at 50% 110%,rgba(34,211,238,.07),transparent 60%);
+    radial-gradient(900px 500px at 88% -10%,rgba(16,185,129,.16),transparent 60%),
+    radial-gradient(700px 420px at -5% 5%,rgba(34,211,238,.10),transparent 55%),
+    radial-gradient(800px 500px at 50% 112%,rgba(16,185,129,.07),transparent 60%);
   background-attachment:fixed;
 }
 .container{max-width:1080px;margin:0 auto;padding:0 22px}
@@ -46,78 +38,101 @@ body{
 img{max-width:100%}
 
 /* ===== الشريط العلوي ===== */
-nav{position:sticky;top:0;z-index:50;background:rgba(7,11,23,.78);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+nav{position:sticky;top:0;z-index:50;background:rgba(10,15,22,.8);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
-.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:1.1rem}
-.logo{width:36px;height:36px;border-radius:10px;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:1.15rem}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:1.08rem}
+.logo{width:38px;height:38px;border-radius:11px;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex:none}
+.brand small{color:var(--muted);font-weight:700;font-size:.78rem;display:block;line-height:1.2}
 
 /* ===== الأزرار ===== */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 32px;border-radius:14px;font-weight:800;font-size:1.05rem;text-decoration:none;transition:.25s;border:none;cursor:pointer}
-.btn-primary{background:var(--grad);color:#fff;box-shadow:0 10px 34px rgba(109,94,248,.45)}
-.btn-primary:hover{transform:translateY(-3px);box-shadow:0 16px 44px rgba(109,94,248,.6)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 32px;border-radius:14px;font-weight:800;font-size:1.05rem;text-decoration:none;transition:.25s;border:none;cursor:pointer;font-family:inherit}
+.btn-primary{background:var(--grad);color:#04120c;box-shadow:0 10px 34px rgba(16,185,129,.35)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 16px 44px rgba(16,185,129,.5)}
 .btn-ghost{border:1px solid var(--border);color:var(--text);background:rgba(255,255,255,.03)}
-.btn-ghost:hover{border-color:var(--c2)}
+.btn-ghost:hover{border-color:var(--g1)}
 .btn-sm{padding:9px 22px;font-size:.95rem;border-radius:11px}
 
 /* ===== الهيرو ===== */
-.hero{padding:96px 0 80px;text-align:center}
-.badge{display:inline-block;border:1px solid rgba(109,94,248,.5);background:rgba(109,94,248,.12);color:#c9c4ff;padding:7px 18px;border-radius:999px;font-size:.9rem;font-weight:700;margin-bottom:22px}
-h1{font-size:clamp(2.1rem,5.5vw,3.4rem);font-weight:900;line-height:1.55}
+.hero{padding:92px 0 76px;text-align:center}
+.badge{display:inline-block;border:1px solid rgba(16,185,129,.5);background:rgba(16,185,129,.1);color:#7fe3c3;padding:7px 18px;border-radius:999px;font-size:.9rem;font-weight:800;margin-bottom:22px}
+.hero-logo{width:92px;height:92px;margin:0 auto 20px;border-radius:26px;background:rgba(16,185,129,.12);border:1px solid rgba(16,185,129,.4);display:flex;align-items:center;justify-content:center;font-size:2.6rem;box-shadow:0 0 60px rgba(16,185,129,.25)}
+h1{font-size:clamp(2rem,5.5vw,3.2rem);font-weight:900;line-height:1.6}
+h1 .en{letter-spacing:.5px}
 .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-.lead{color:var(--muted);max-width:640px;margin:16px auto 0;font-size:1.08rem}
+.lead{color:var(--muted);max-width:680px;margin:16px auto 0;font-size:1.1rem}
 .cta-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:34px}
 .trust{margin-top:16px;color:var(--muted);font-size:.92rem}
-.note{max-width:660px;margin:18px auto 0;background:rgba(250,204,21,.1);border:1px solid rgba(250,204,21,.35);color:#fde68a;padding:10px 18px;border-radius:12px;font-size:.95rem}
+.note{max-width:660px;margin:18px auto 0;background:rgba(250,204,21,.09);border:1px solid rgba(250,204,21,.35);color:#fde68a;padding:10px 18px;border-radius:12px;font-size:.95rem}
 .pills{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:26px}
 .pill{border:1px solid var(--border);background:var(--card);padding:7px 16px;border-radius:999px;font-size:.9rem;color:var(--muted)}
+.pill b{color:var(--text)}
 
 /* ===== الأقسام ===== */
 .section{padding:84px 0}
 .alt{background:rgba(255,255,255,.022);border-block:1px solid var(--border)}
-.section h2{font-size:clamp(1.6rem,3.5vw,2.3rem);font-weight:900;text-align:center}
-.section-sub{text-align:center;color:var(--muted);max-width:660px;margin:10px auto 46px}
+.section h2{font-size:clamp(1.6rem,3.5vw,2.25rem);font-weight:900;text-align:center}
+.section-sub{text-align:center;color:var(--muted);max-width:700px;margin:10px auto 46px}
 
 /* ===== المميزات ===== */
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
 .card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:28px 24px;transition:.25s}
-.card:hover{transform:translateY(-4px);border-color:rgba(109,94,248,.5);background:rgba(109,94,248,.07)}
-.ico{font-size:1.7rem;width:58px;height:58px;display:flex;align-items:center;justify-content:center;background:var(--grad);border-radius:16px;margin-bottom:18px}
+.card:hover{transform:translateY(-4px);border-color:rgba(16,185,129,.5);background:rgba(16,185,129,.06)}
+.ico{font-size:1.6rem;width:58px;height:58px;display:flex;align-items:center;justify-content:center;background:rgba(16,185,129,.12);border:1px solid rgba(16,185,129,.35);border-radius:16px;margin-bottom:18px}
 .card h3{font-size:1.12rem;margin-bottom:8px}
 .card p{color:var(--muted);font-size:.97rem}
 
-/* ===== لقطات الشاشة ===== */
-.phones{display:flex;gap:26px;justify-content:center;flex-wrap:wrap}
-.phone{width:215px;aspect-ratio:9/19;border:2px dashed rgba(255,255,255,.28);border-radius:28px;background:rgba(255,255,255,.03);display:flex;flex-direction:column;gap:8px;align-items:center;justify-content:center;color:var(--muted);text-align:center;padding:16px;font-size:.95rem}
-.phone .big{font-size:2.2rem}
-.phone img{width:100%;height:100%;object-fit:cover;border-radius:24px}
+/* ===== معرض الصور ===== */
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px}
+.shot{position:relative;border:1px solid var(--border);border-radius:22px;overflow:hidden;cursor:zoom-in;background:var(--card);aspect-ratio:9/18;transition:.25s}
+.shot:hover{border-color:rgba(34,211,238,.6);transform:translateY(-4px)}
+.shot img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.shot .cap{position:absolute;inset-inline:0;bottom:0;background:linear-gradient(transparent,rgba(4,10,14,.92));padding:26px 12px 10px;font-size:.85rem;font-weight:700;text-align:center;color:#d7e6ee}
+.gal-hint{text-align:center;color:var(--muted);font-size:.9rem;margin-top:18px}
 
-/* ===== خطوات التثبيت ===== */
-.steps{max-width:780px;margin:0 auto;display:grid;gap:18px}
+/* ===== العارض المكبّر ===== */
+#lightbox{position:fixed;inset:0;z-index:100;background:rgba(4,8,12,.92);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:24px}
+#lightbox.open{display:flex}
+#lightbox img{max-width:min(92vw,420px);max-height:86vh;border-radius:20px;border:1px solid rgba(255,255,255,.15)}
+.lb-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.08);border:1px solid var(--border);color:#fff;width:48px;height:48px;border-radius:50%;font-size:1.4rem;cursor:pointer;transition:.2s}
+.lb-btn:hover{background:rgba(16,185,129,.3)}
+.lb-prev{right:18px}.lb-next{left:18px}
+.lb-close{position:absolute;top:18px;left:18px;right:auto;transform:none;width:44px;height:44px}
+.lb-count{position:absolute;top:26px;right:26px;color:var(--muted);font-weight:700;font-size:.95rem}
+
+/* ===== الخطوات ===== */
+.steps{max-width:800px;margin:0 auto;display:grid;gap:18px}
 .step{display:flex;gap:18px;background:var(--card);border:1px solid var(--border);border-radius:18px;padding:22px;align-items:flex-start}
-.num{flex:none;width:46px;height:46px;border-radius:14px;background:var(--grad);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1.2rem;color:#fff}
+.num{flex:none;width:46px;height:46px;border-radius:14px;background:var(--grad);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1.2rem;color:#04120c}
 .step h3{font-size:1.08rem;margin-bottom:6px}
 .step p{color:var(--muted);font-size:.97rem}
 .step code{background:rgba(255,255,255,.09);padding:2px 9px;border-radius:8px;font-size:.9em;white-space:nowrap}
 
 /* ===== الأسئلة الشائعة ===== */
-.faq{max-width:780px;margin:0 auto;display:grid;gap:14px}
+.faq{max-width:800px;margin:0 auto;display:grid;gap:14px}
 details{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px 22px}
 summary{font-weight:800;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}
 summary::-webkit-details-marker{display:none}
-summary::after{content:"+";font-size:1.5rem;color:var(--c2);font-weight:900}
+summary::after{content:"+";font-size:1.5rem;color:var(--g1);font-weight:900}
 details[open] summary::after{content:"–"}
 details p{color:var(--muted);margin-top:10px}
 
+/* ===== سياسة الخصوصية ===== */
+.policy{max-width:800px;margin:0 auto;display:grid;gap:16px}
+.policy .card p{font-size:.98rem}
+.policy .card h3{display:flex;align-items:center;gap:10px}
+
 /* ===== التذييل ===== */
-footer{border-top:1px solid var(--border);padding:40px 0 48px;text-align:center;color:var(--muted);font-size:.95rem}
+footer{border-top:1px solid var(--border);padding:42px 0 48px;text-align:center;color:var(--muted);font-size:.95rem}
 footer .links{display:flex;gap:24px;justify-content:center;margin:16px 0;flex-wrap:wrap}
 footer a{color:var(--text);text-decoration:none}
-footer a:hover{color:var(--c2)}
+footer a:hover{color:var(--g1)}
 
 @media(max-width:640px){
-  .hero{padding:70px 0 60px}
+  .hero{padding:64px 0 56px}
   .section{padding:64px 0}
   .step{flex-direction:column;gap:12px}
+  .lb-btn{width:42px;height:42px}
+  .lb-prev{right:8px}.lb-next{left:8px}
 }
 </style>
 </head>
@@ -126,7 +141,7 @@ footer a:hover{color:var(--c2)}
 <!-- ===== الشريط العلوي ===== -->
 <nav>
   <div class="container nav-inner">
-    <div class="brand"><span class="logo">📱</span><span>shadow_vault ⚠️</span></div>
+    <div class="brand"><span class="logo">🛡️</span><span>SHADOW VAULT<small>حماية اتصالك — بخصوصيتك الكاملة</small></span></div>
     <a class="btn btn-primary btn-sm" href="#download">تحميل الآن</a>
   </div>
 </nav>
@@ -134,20 +149,23 @@ footer a:hover{color:var(--c2)}
 <!-- ===== القسم الرئيسي ===== -->
 <header class="hero" id="top">
   <div class="container">
-    <span class="badge">🚀 الإصدار الأحدث متاح الآن</span>
-    <h1>حمّل <span class="grad">shadow_vault ⚠️</span><br>وابدأ الاستخدام في دقيقة</h1>
-    <p class="lead">⚠️ ضع هنا وصفاً من سطرين يشرح فكرة تطبيقك وأهم ما يقدمه — هذا أول نص يقرأه الزائر، اجعله قوياً ومختصراً.</p>
+    <div class="hero-logo">🛡️</div>
+    <span class="badge">✅ الإصدار v0.7.2 — الأحدث متاح الآن</span>
+    <h1><span class="en grad">SHADOW VAULT</span><br>اتصالاتك ورسائلك… تحت سيطرتك الكاملة</h1>
+    <p class="lead">تطبيق مساعد ذكي يفلتر المكالمات والأرقام والرسائل غير المرغوبة، وينظّف سجلك من المكالمات والرسائل القديمة والزائدة بضغطة واحدة — ليمنحك سجلاً نظيفاً وتجربة اتصال هادئة، مع حماية وشفافية كاملة لكل اختياراتك، وكل ذلك يعمل محلياً على جهازك.</p>
     <div id="platform-note" class="note hidden">⚠️ يبدو أنك تتصفح من جهاز غير أندرويد — ملف التحميل الحالي مخصص لأجهزة Android فقط.</div>
     <div class="cta-row">
-      <a id="download" class="btn btn-primary" href="https://github.com/Ainz-00/My-app-site/releases/latest/download/shadow_vault.apk">⬇️ تحميل التطبيق (APK)</a>
-      <a class="btn btn-ghost" href="#install">طريقة التثبيت</a>
+      <!-- ✅ تحقق من هذا الرابط: اسم المستودع + اسم ملف الـ APK لديك -->
+      <a id="download" class="btn btn-primary" href="https://github.com/ainz-00/shadow-vault/releases/latest/download/shadow-vault.apk">⬇️ تحميل التطبيق (APK) — v0.7.2</a>
+      <a class="btn btn-ghost" href="#install">طريقة التثبيت والتسجيل</a>
     </div>
-    <p class="trust">🔒 التنزيل مباشرة من GitHub — مجاني، بدون إعلانات، وبدون تسجيل</p>
+    <p class="trust">🔒 التنزيل مباشرة من GitHub — بدون إعلانات، وبدون وسطاء</p>
     <div class="pills">
-      <span class="pill">الإصدار: ⚠️ 0.7.0</span>
-      <span class="pill">الحجم: ⚠️ ~48 ميجابايت</span>
-      <span class="pill">آخر تحديث: ⚠️ أكتوبر 2026</span>
-      <span class="pill">متطلب: Android 8.0+ ⚠️</span>
+      <span class="pill">الإصدار: <b>0.7.2</b></span>
+      <span class="pill">الحجم: <b>~48 ميجابايت</b></span>
+      <span class="pill">متطلب: <b>Android 7.0 فما فوق</b></span>
+      <span class="pill">متوافق حتى <b>Android 14 / 15</b></span>
+      <span class="pill">🔐 تشفير <b>AES-256</b></span>
     </div>
   </div>
 </header>
@@ -155,21 +173,115 @@ footer a:hover{color:var(--c2)}
 <!-- ===== المميزات ===== -->
 <section class="section" id="features">
   <div class="container">
-    <h2>مميزات التطبيق</h2>
-    <p class="section-sub">⚠️ استبدل هذه البطاقات الست بمميزات تطبيقك الحقيقية — مميزة قصيرة وعملية أفضل من طويلة.</p>
+    <h2>لماذا Shadow Vault؟</h2>
+    <p class="section-sub">كل ما تحتاجه للتحكم في اتصالاتك ورسائلك — سريع، آمن، وبحماية قوية تحترم خصوصيتك.</p>
     <div class="grid">
-      <div class="card"><div class="ico">⚡</div><h3>⚠️ عنوان الميزة الأولى</h3><p>⚠️ اكتب هنا وصفاً من سطرين يشرح هذه الميزة وفائدتها للمستخدم.</p></div>
-      <div class="card"><div class="ico">🎨</div><h3>⚠️ عنوان الميزة الثانية</h3><p>⚠️ اكتب هنا وصفاً من سطرين يشرح هذه الميزة وفائدتها للمستخدم.</p></div>
-      <div class="card"><div class="ico">🔒</div><h3>⚠️ عنوان الميزة الثالثة</h3><p>⚠️ اكتب هنا وصفاً من سطرين يشرح هذه الميزة وفائدتها للمستخدم.</p></div>
-      <div class="card"><div class="ico">📊</div><h3>⚠️ عنوان الميزة الرابعة</h3><p>⚠️ اكتب هنا وصفاً من سطرين يشرح هذه الميزة وفائدتها للمستخدم.</p></div>
-      <div class="card"><div class="ico">🌙</div><h3>⚠️ عنوان الميزة الخامسة</h3><p>⚠️ اكتب هنا وصفاً من سطرين يشرح هذه الميزة وفائدتها للمستخدم.</p></div>
-      <div class="card"><div class="ico">🆓</div><h3>⚠️ عنوان الميزة السادسة</h3><p>⚠️ اكتب هنا وصفاً من سطرين يشرح هذه الميزة وفائدتها للمستخدم.</p></div>
+      <div class="card"><div class="ico">🚫</div><h3>فلترة ذكية للمكالمات والرسائل</h3><p>يحجب تلقائياً المكالمات والرسائل والأرقام غير المرغوبة، مع حماية ومراقبة في الخلفية على مدار الساعة — اتصالك يبقى نظيفاً وهادئاً.</p></div>
+      <div class="card"><div class="ico">🧹</div><h3>تنظيف السجل بضغطة واحدة</h3><p>فحص شامل للسجلات ثم حذف المكالمات والرسائل القديمة والزائدة دفعة واحدة — سجل نظيف ومساحة أخصر دون حذف يدوي مرهق.</p></div>
+      <div class="card"><div class="ico">🔒</div><h3>خصوصية مطلقة — يعمل محلياً</h3><p>يعمل كلياً على جهازك بدون إنترنت، وبياناتك مشفرة ولا تخرج منه أبداً. لا نرى ما لديك ولا نتدخل في أي محتوى على جهازك.</p></div>
+      <div class="card"><div class="ico">🛡️</div><h3>شفافية كاملة في الصلاحيات</h3><p>يطلب أقل الصلاحيات الضرورية فقط لعمل الفلترة، ويشرح لك سبب كل إذن — الحماية والشفافية التامة لاختياراتك.</p></div>
+      <div class="card"><div class="ico">📋</div><h3>قوائم محمية مخصصة</h3><p>أنشئ أرقاماً محمية وقوائم خاصة للاتصال أو المراسلة الفورية — أرقامك المهمة لا يمسّها الفلتر أبداً، وتحكمك فيها بيدك.</p></div>
+      <div class="card"><div class="ico">⚡</div><h3>خفيف وسريع على كل الأجهزة</h3><p>أداء سلس وواجهة عربية أنيقة تعمل بسلاسة على Android 7 فما فوق، وحتى أحدث الإصدارات 14 و15 — دون استهلاك موارد جهازك.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ===== لقطات الشاشة ===== -->
+<!-- ===== معرض الصور ===== -->
 <section class="section alt" id="screenshots">
+  <div class="container">
+    <h2>لقطات من داخل التطبيق</h2>
+    <p class="section-sub">جولة سريعة في واجهة Shadow Vault — اضغط على أي صورة لتكبيرها واستعراض الشاشات بالترتيب.</p>
+    <div class="gallery" id="gallery">
+      <div class="shot"><img src="screens/screen1.png" alt="الرئيسية — حالة النظام والحماية" loading="lazy" data-cap="الرئيسية — حالة النظام: نشط ومحمي (AES-256)"><div class="cap">الرئيسية — حالة النظام والحماية</div></div>
+      <div class="shot"><img src="screens/screen2.png" alt="قائمة الأرقام المحمية" loading="lazy" data-cap="قائمة الأرقام المحمية — أرقامك الآمنة خارج الفلتر"><div class="cap">قائمة الأرقام المحمية</div></div>
+      <div class="shot"><img src="screens/screen3.png" alt="الإعدادات — التراخيص والحماية" loading="lazy" data-cap="الإعدادات — تراخيص مخصّصة وشفافية كاملة"><div class="cap">الإعدادات — التراخيص والحماية</div></div>
+      <div class="shot"><img src="screens/screen4.png" alt="تأكيد الدخول" loading="lazy" data-cap="تأكيد الدخول — بيانات الترخيص المشفّرة"><div class="cap">تأكيد الدخول والتفعيل</div></div>
+      <div class="shot"><img src="screens/screen5.png" alt="شاشة تسجيل الدخول" loading="lazy" data-cap="تسجيل الدخول — أدخل بياناتك من المسؤول"><div class="cap">شاشة تسجيل الدخول</div></div>
+      <div class="shot"><img src="screens/screen6.png" alt="ربط رابط النفق عبر QR" loading="lazy" data-cap="ربط رابط النفق — امسح أو الصق الرابط"><div class="cap">ربط رابط النفق عبر QR</div></div>
+    </div>
+    <p class="gal-hint">💡 داخل المعرض يمكنك التقليب بين الصور بالأسهم، والإغلاق بزر Esc.</p>
+  </div>
+</section>
+
+<!-- ===== طريقة التثبيت ===== -->
+<section class="section" id="install">
+  <div class="container">
+    <h2>طريقة التثبيت على أندرويد</h2>
+    <p class="section-sub">يُنزَّل التطبيق بصيغة APK من خارج متجر Google Play، لذلك سيُظهر أندرويد تحذيرات أمان طبيعية — هذه الخطوات الثلاث تحلّها ببساطة:</p>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><div><h3>اضغط زر التحميل</h3><p>إذا ظهرت رسالة <code>«قد يكون هذا الملف ضاراً»</code> من المتصفح اضغط <code>«التنزيل على أي حال»</code> — هذا تحذير عام يظهر لأي ملف APK من خارج المتجر حتى لو كان الموقع موثوقاً تماماً.</p></div></div>
+      <div class="step"><div class="num">2</div><div><h3>افتح الملف واسمح بالتثبيت</h3><p>عند فتح الملف لأول مرة سيطلب أندرويد السماح بخيار <code>«تثبيت تطبيقات غير معروفة»</code> للمتصفح أو مدير الملفات — وافق مرة واحدة فقط.</p></div></div>
+      <div class="step"><div class="num">3</div><div><h3>أكمل فحص الحماية</h3><p>إذا ظهر فحص <code>Play Protect</code> اضغط <code>«التثبيت على أي حال»</code>، ثم افتح التطبيق وتابع خطوات التسجيل بالأسفل. ✅</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== طريقة التسجيل ===== -->
+<section class="section alt" id="register">
+  <div class="container">
+    <h2>التسجيل وتفعيل الحساب</h2>
+    <p class="section-sub">يستخدم Shadow Vault نظام ترخيص مخصّص لحماية المشتركين — التفعيل يتم بمساعدة المسؤول مباشرة من داخل التطبيق:</p>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><div><h3>تواصل مع المسؤول من داخل التطبيق</h3><p>بعد التثبيت، افتح التطبيق واضغط <code>«طلب بيانات الدخول / استعادة الترخيص»</code> لطلب بيانات حسابك.</p></div></div>
+      <div class="step"><div class="num">2</div><div><h3>استلم بياناتك الثلاثة</h3><p>سيرسل لك المسؤول: <code>اسم المستخدم</code> و<code>كلمة السر</code> و<code>كود التفعيل</code> — أدخل كل عنصر في خانته المخصصة في شاشة الدخول.</p></div></div>
+      <div class="step"><div class="num">3</div><div><h3>اربط رابط النفق عبر QR</h3><p>اضغط زر <code>QR</code> في أعلى الشاشة، انسخ <code>رابط النفق</code> الذي استلمته والصقه داخله، ثم أكمل الربط.</p></div></div>
+      <div class="step"><div class="num">4</div><div><h3>سجّل واستمتع 🎉</h3><p>اضغط <code>تأكيد الدخول</code> وسيعمل التطبيق مباشرة — فلترة وتنظيف وحماية، كل ذلك محلياً على جهازك.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== الأسئلة الشائعة ===== -->
+<section class="section" id="faq">
+  <div class="container">
+    <h2>الأسئلة الشائعة</h2>
+    <p class="section-sub">كل ما تحتاج معرفته عن التحميل والترخيص والتحديث.</p>
+    <div class="faq">
+      <details><summary>هل التطبيق مجاني؟</summary><p>تحميل التطبيق مجاني تماماً، ويشمل <b>فترة تجريبية 7 أيام</b> لتجربة كل المزايا. بعد انتهاء الفترة التجريبية توجد خطط اشتراك بأسعار تنافسية وزهيدة تناسب الجميع — تختار ما يناسبك من داخل التطبيق.</p></details>
+      <details><summary>هل ملف APK آمن؟</summary><p>نعم، الملف <b>آمن تماماً</b> ويُنزَّل من رابط رسمي واحد مستضاف على GitHub. الصلاحيات التي يطلبها التطبيق (مثل الوصول للاتصال والإشعارات) تأتي بسبب سياسات أندرويد الجديدة للتطبيقات التي تعمل خارج المتجر، وهي خيارات ضرورية ليعمل الفلتر والحماية بشكل صحيح — والتطبيق شفاف معك في سبب كل إذن.</p></details>
+      <details><summary>كيف أعرف أن هناك إصداراً أحدث؟ وكيف أُحدّث؟</summary><p>ستصلك رسائل تنبيه عن أحدث إصدار عند توفره — عندما يصلك التنبيه، عد إلى هذا الموقع ونزّل أحدث إصدار وثبّته فوق نسختك الحالية مباشرة، وسيتم التحديث دون فقدان بياناتك. زر التحميل هنا يعطيك دائماً آخر إصدار تلقائياً.</p></details>
+      <details><summary>هل يعمل التطبيق بدون إنترنت؟</summary><p>نعم، Shadow Vault <b>يعمل كلياً محلياً بدون إنترنت</b> — الفلترة والتنظيف والحماية كلها على جهازك. الاتصال بالإنترنت يُحتاج فقط في حالتين: <b>التسجيل الأولي</b> داخل التطبيق، و<b>اختيار الخطة</b> بعد الفترة التجريبية.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== سياسة الخصوصية ===== -->
+<section class="section alt" id="privacy">
+  <div class="container">
+    <h2>سياسة الخصوصية وشروط الاستخدام</h2>
+    <p class="section-sub">باختصار وبلغة واضحة: خصوصيتك خط أحمر.</p>
+    <div class="policy">
+      <div class="card"><h3>🔐 احترام الخصوصية الكاملة</h3><p>نحافظ على خصوصيتك بشكل مطلق، ولن نتدخل في أي شيء يوجد في تطبيقك أو جهازك — لا نقرأ محتواك، ولا نرى مكالماتك أو رسائلك، ولا نجمع أي بيانات شخصية. كل المعالجة تجري محلياً على جهازك، والاتصال الخارجي يقتصر على تسجيلك الأولي وتفعيل خطتك.</p></div>
+      <div class="card"><h3>⚖️ سياسة عدم التعديل</h3><p>يُحظر تعديل التطبيق أو هندسته عكسياً أو محاولة فك تشفيره أو إعادة توزيعه بأي طريقة كانت — وذلك لحماية نظام الترخيص وضمان أمان جميع المستخدمين. أي نسخة معدّلة غير رسمية لا نتحمل مسؤوليتها، فاحرص دائماً على التحميل من هذا الموقع فقط.</p></div>
+      <div class="card"><h3>📜 سياسات عامة</h3><p>الترخيص شخصي وغير قابل للنقل، وقد يُلغى في حال إساءة الاستخدام. قد تتحدث الأسعار والخطط من وقت لآخر، ويُبلَّغ المشتركون بأي تغيير جوهري مسبقاً. استخدامك للتطبيق يعني موافقتك على هذه السياسة — وهذا المستند قد يُحدَّث دورياً ويظهر هنا دائماً بأحدث نسخة.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== التذييل ===== -->
+<footer>
+  <div class="container">
+    <div class="brand" style="justify-content:center"><span class="logo">🛡️</span><span>SHADOW VAULT<small style="font-size:.8rem">v0.7.2</small></span></div>
+    <div class="links">
+      <a href="#privacy">سياسة الخصوصية</a>
+      <a href="#faq">الأسئلة الشائعة</a>
+      <a href="https://github.com/ainz-00/My-app-site">المستودع الرسمي على GitHub</a>
+    </div>
+    <p>© <span id="year"></span> Shadow Vault — جميع الحقوق محفوظة</p>
+    <p style="margin-top:6px;opacity:.7">الدعم الفني: تواصل مع المسؤول من داخل التطبيق</p>
+  </div>
+</footer>
+
+<!-- ===== العارض المكبّر ===== -->
+<div id="lightbox" role="dialog" aria-label="عارض الصور">
+  <span class="lb-count" id="lb-count"></span>
+  <button class="lb-btn lb-close" id="lb-close" aria-label="إغلاق">✕</button>
+  <button class="lb-btn lb-prev" id="lb-prev" aria-label="السابق">›</button>
+  <img id="lb-img" src="" alt="لقطة شاشة مكبّرة">
+  <button class="lb-btn lb-next" id="lb-next" aria-label="التالي">‹</button>
+</div>
+
+<script>
+document.getElementById('year').textContent = new Date().gtion alt" id="screenshots">
   <div class="container">
     <h2>لقطات من التطبيق</h2>
     <p class="section-sub">⚠️ استبدل كل مربع من هذه المربعات بلقطة شاشة حقيقية من تطبيقك (انسخ وسم الصورة الموجود في التعليق داخل كل مربع).</p>
